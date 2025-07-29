@@ -81,8 +81,13 @@ GOOGLE_OAUTH2_SECRET= Secreto del cliente
 SECRET_KEY = clave secreta
 ```
 
+Antes de hacer deploy 
+```
+python3 manage.py collectstatic --noinput
+```
 En koyeb
-python3 manage.py migrate && python3 manage.py collectstatic --noinput
+python3 manage.py makemigrations
+python3 manage.py migrate
 
 
 

@@ -33,7 +33,12 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "clave-insegura")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 # Agregale la url que se genera en koyeb
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "protestant-ketty-espol-dawn-17996184.koyeb.app", # Agregar una vez hecho deploy 
+    "localhost",
+    "127.0.0.1",
+]
+
 # Application definition
 
 INSTALLED_APPS = [
