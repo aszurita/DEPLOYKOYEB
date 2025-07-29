@@ -15,7 +15,7 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 # Agregale la url que se genera en koyeb
 ALLOWED_HOSTS = [
-    "fair-rania-espol-dawn-bf49c5ba.koyeb.app",
+    "", # Agregar una vez hecho deploy 
     "localhost",
     "127.0.0.1",
 ]
@@ -80,6 +80,10 @@ GOOGLE_OAUTH2_KEY= ID de cliente
 GOOGLE_OAUTH2_SECRET= Secreto del cliente
 SECRET_KEY = clave secreta
 ```
+
+En koyeb
+python3 manage.py migrate && python3 manage.py collectstatic --noinput
+
 
 
 

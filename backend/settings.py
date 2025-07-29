@@ -28,11 +28,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #SECRET_KEY = "django-insecure-#y=m_s1tz^*6x+$iit&*m245h(x4)n%+%uwhydcel2wgm7$=@%"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True  # cambiar
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
-# ALLOWED_HOSTS = []
 
+SECRET_KEY = os.environ.get("SECRET_KEY", "clave-insegura")
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
+# Agregale la url que se genera en koyeb
+ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
